@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>seamless-slide-demo-状态机</title>
-   <link rel="stylesheet" href="./css/style.css"></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>seamless-slide-demo-状态机</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
 <body>
+    <div id="window" class="window">
+        <div id="wrapper" class="wrapper">
+            <img class="current" src="./image/sea01.jpg" width="600px" height="338px" alt="image">
+            <img class="enter" src="./image/sea02.jpg" width="600px" height="338px" alt="image">
+            <img class="enter" src="./image/sea03.jpg" width="600px" height="338px" alt="image">
+            <img class="enter" src="./image/sea04.jpg" width="600px" height="338px" alt="image">
+        </div>
+    </div>
+    <div id="index" class="index">
+        <ul class="clearfix">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
 
-   <script src="./js/main.js"></script></body>
 </html>
