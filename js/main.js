@@ -1,6 +1,7 @@
 $(() => {
-    $pics = $('.window > .wrapper > img')
+    let $pics = $('#window > #wrapper > img')
     let n = 0
+    let $window = $('#window')
     let timer = autoPlay()
     $(document).on('visibilitychange',() => {
         if(document.hidden){
@@ -8,6 +9,11 @@ $(() => {
         }else{
             timer = autoPlay()
         }
+    })
+    $window.hover(() => {
+        clearInterval(timer)
+    },() => {
+        timer = autoPlay()
     })
 
     // 工具函数

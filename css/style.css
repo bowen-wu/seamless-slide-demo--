@@ -10,6 +10,7 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
     margin: 100px auto 10px;
     overflow: hidden;
     border-radius: 6px;
+    cursor: pointer;
 }
 .window > .wrapper{
     position: relative;
