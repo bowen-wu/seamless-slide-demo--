@@ -1,15 +1,25 @@
 $(() => {
     $pics = $('.window > .wrapper > img')
     let n = 0
-    setInterval(() => {
-        leaveStatus(getNode()).one('transitionend',(event) => {
-            enterStatus($(event.currentTarget))
-        })
-        n++
-        currentStatus(getNode())
-    },2000)
+    let timer = autoPlay()
+    $(document).on('visibilitychange',() => {
+        if(document.hidden){
+            clearInterval(timer)
+        }else{
+            timer = autoPlay()
+        }
+    })
 
     // 工具函数
+    function autoPlay() {
+        return setInterval(() => {
+            leaveStatus(getNode()).one('transitionend', (event) => {
+                enterStatus($(event.currentTarget))
+            })
+            n++
+            currentStatus(getNode())
+        }, 2500)
+    }
     function getNode(){
         return $pics.eq(n % $pics.length)
     }

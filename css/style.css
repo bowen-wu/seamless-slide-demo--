@@ -9,15 +9,18 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
     height: 338px;
     margin: 100px auto 10px;
     overflow: hidden;
+    border-radius: 6px;
 }
 .window > .wrapper{
     position: relative;
+    border-radius: 6px;
 }
 .window > .wrapper > img{
     vertical-align: top;
     position: absolute;
     top: 0;
     transition: all 0.5s;
+    border-radius: 6px;
 }
 .window > .wrapper > img.current{
     transform: translateX(0);
@@ -31,21 +34,3 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
 }
 
 
-
-
-
-.index{
-    text-align: center;
-    margin-bottom: 100px;
-}
-.index > ul{
-    display: inline-block;
-}
-.index > ul > li{
-    float: left;
-    height: 12px;
-    width: 12px;
-    background-color: #6FA3AE;
-    border-radius: 50%;
-    margin: 0 8px;
-}
