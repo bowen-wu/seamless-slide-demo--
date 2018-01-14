@@ -3,18 +3,7 @@ $(() => {
     let n = 0
     let $window = $('#window')
     let timer = autoPlay()
-    $(document).on('visibilitychange',() => {
-        if(document.hidden){
-            clearInterval(timer)
-        }else{
-            timer = autoPlay()
-        }
-    })
-    $window.hover(() => {
-        clearInterval(timer)
-    },() => {
-        timer = autoPlay()
-    })
+    hoverAndPageJQ()
 
     // 工具函数
     function autoPlay() {
@@ -37,5 +26,21 @@ $(() => {
     }
     function currentStatus($node){
         $node.removeClass('enter').addClass('current')
+    }
+
+    function hoverAndPageJQ() {
+        $window.hover(() => {
+            clearInterval(timer)
+        }, () => {
+            timer = autoPlay()
+        })
+        $(document).on('visibilitychange', () => {
+            console.log(document.hidden)
+            if (document.hidden) {
+                clearInterval(timer)
+            } else {
+                timer = autoPlay()
+            }
+        })
     }
 })
